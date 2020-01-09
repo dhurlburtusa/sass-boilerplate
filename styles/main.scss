@@ -2,25 +2,25 @@
 | This is the main structural style sheet.
 ============================================================================= */
 
-@import 'variables';
-@import 'placeholders';
-@import 'mixins';
-@import 'fonts';
-@import 'keyframes';
+@import 'partials/variables';
+@import 'partials/placeholders';
+@import 'partials/mixins';
+@import 'partials/fonts';
+@import 'partials/keyframes';
 
-// @import 'overrides/bootstrap';
+// @import 'partials/overrides/bootstrap';
 
-@import 'elements';
+@import 'partials/elements';
 
-@import 'components/misc';
-@import 'components/buttons';
-@import 'components/forms';
-@import 'components/headings';
-@import 'components/links';
-@import 'components/site-footer';
-@import 'components/site-header';
+@import 'partials/components/misc';
+@import 'partials/components/buttons';
+@import 'partials/components/forms';
+@import 'partials/components/headings';
+@import 'partials/components/links';
+@import 'partials/components/site-footer';
+@import 'partials/components/site-header';
 
-@import 'accessibility';
-@import 'site-media-queries';
-@import 'svg';
-@import 'utilities';
+@import 'partials/accessibility';
+@import 'partials/site-media-queries';
+@import 'partials/svg';
+@import 'partials/utilities';
