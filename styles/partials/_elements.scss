@@ -1,0 +1,82 @@
+/**
+| Element Styles:
+============================================================================= */
+
+@import 'custom-media';
+
+/**
+| Border-Box Reset:
+===================================== */
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	/*
+	Inherit box-sizing to make it easier to change the property for components that
+	leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+	*/
+	box-sizing: inherit;
+}
+
+body {
+	// font-family: ...;
+
+	&::-webkit-scrollbar {
+		width: 10px;
+		background: #ccc;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #ccc;
+		box-shadow: 0 0 9px rgba(0, 0, 0, 0.3) inset;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #333;
+		border-radius: 10px;
+		box-shadow: 0 0 9px rgba(0, 0, 0, 0.3) inset;
+	}
+}
+
+/**
+| Buttons:
+===================================== */
+
+button {
+	display: inline-block;
+}
+
+// See `components/_buttons.scss`.
+
+/**
+| Form Elements:
+===================================== */
+
+// See `components/_forms.scss`.
+
+/**
+| Images:
+===================================== */
+
+img {
+	display: inline-block;
+	max-width: 100%;
+}
+
+/**
+| Headings:
+===================================== */
+
+// See `components/_headings.scss`.
+
+/**
+| Links:
+===================================== */
+
+a {
+	display: inline-block;
+}

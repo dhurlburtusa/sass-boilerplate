@@ -1,0 +1,14 @@
+/**
+| Headings Styles:
+|
+| Inherits heading styles from `../_elements.scss`.
+============================================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+	color: $headings--color;
+	font-style: normal;
+	font-weight: 700;
+}

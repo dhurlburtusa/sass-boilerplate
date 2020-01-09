@@ -1,0 +1,167 @@
+/**
+| Site Header Component:
+============================================================================ */
+
+@import '../custom-media';
+
+.site-header {
+	margin: 0 auto;
+	width: 85%;
+	max-width: 85%;
+
+	@media (--md-viewport) {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.site-logo {
+		height: 80px;
+		transition: height 0.5s ease-in-out;
+
+		@media (--md-viewport) {
+			height: 120px;
+		}
+
+		@media (--lg-viewport) {
+			height: 180px;
+		}
+	}
+
+	.site-nameplate {
+		flex-shrink: 0;
+		// The background and padding allow for focus box-shadow.
+		padding: 2px;
+		background: #fff;
+		font-size: 1.25rem;
+		white-space: nowrap;
+	}
+
+	.menu-toggler {
+		background: transparent;
+		border: 0;
+
+		@media (--md-viewport) {
+			display: none;
+		}
+
+		&__icon {
+			$height-line: 2px;
+
+			$size: 32px;
+
+			$color: #000;
+
+			$transition-time: 0.5s;
+
+			$translateY: 16px;
+
+			position: relative;
+			width: $size;
+			height: $size;
+			display: block;
+			padding: 0;
+
+			background: none;
+			border: 0;
+			cursor: pointer;
+
+			.line {
+				position: absolute;
+				left: 0;
+				display: block;
+				width: 100%;
+				height: $height-line;
+				background: $color;
+				border-radius: 2px;
+				transition: all $transition-time;
+
+				&:nth-child(1) {
+					top: calc(20% - 1px);
+				}
+
+				&:nth-child(2) {
+					top: calc(50% - 1px);
+				}
+
+				&:nth-child(3) {
+					top: calc(80% - 1px);
+				}
+			}
+
+			&:focus,
+			&:hover {
+				// stylelint-disable-next-line no-descending-specificity
+				.line {
+					&:nth-child(1) {
+						transform: translateY(-2px);
+					}
+
+					&:nth-child(3) {
+						transform: translateY(2px);
+					}
+				}
+			}
+
+			&.is-active {
+				// stylelint-disable-next-line no-descending-specificity
+				.line {
+					&:nth-child(1) {
+						transform: translateY(16px) translateX(0) rotate(45deg);
+						top: -1px;
+					}
+
+					&:nth-child(2) {
+						opacity: 0;
+					}
+
+					&:nth-child(3) {
+						transform: translateY(-16px) translateX(0) rotate(-45deg);
+						top: calc(100% - 1px);
+					}
+				}
+			}
+		}
+
+		&__text {
+			@extend %screen-reader-only;
+		}
+	}
+
+	&__main {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0;
+
+		@media (--md-viewport) {
+			flex-flow: row nowrap;
+			justify-content: flex-start;
+
+			.navbar-nav {
+				flex-direction: row;
+			}
+		}
+	}
+
+	&__menu {
+		flex-basis: 100%;
+		flex-grow: 1;
+		align-items: center;
+		justify-content: flex-end;
+
+		@media (--md-viewport) {
+			display: flex !important; // Override .collapse:not(.show)
+			flex-basis: auto;
+			margin-right: 2rem;
+		}
+	}
+}
+
+.is-scrolled .site-header .site-logo {
+
+	@media (--md-viewport) {
+		height: 80px;
+	}
+}

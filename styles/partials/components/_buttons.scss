@@ -1,0 +1,59 @@
+/**
+| Button Styles:
+|
+| Inherits button styles from `../_elements.scss`.
+============================================================================= */
+
+// Button Skin:
+// ------------
+
+button,
+[type="button"]
+[type="reset"],
+[type="submit"] {
+	padding: 0 0.5rem;
+	border: 0px;
+	border-radius: 0.3125rem;
+}
+
+// [type=button]
+// [type=reset],
+// [type=submit] {
+// 	height: 2.5rem;
+// }
+
+.btn--xs {
+	height: 1.5rem;
+	border-radius: 0.1875rem;
+	font-size: 0.75rem;
+	// Somehow the following makes the button be the height specified. Without it, the
+	// button is 2.5 px taller than it should be.
+	vertical-align: bottom;
+}
+
+.btn--sm {
+	height: 2rem;
+	border-radius: 0.25rem;
+	font-size: 0.875rem;
+}
+
+.btn--md {
+	height: 2.5rem;
+	border-radius: 0.3125rem;
+}
+
+.btn--lg {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	height: 3rem;
+	border-radius: 0.375rem;
+	font-size: 1.125rem;
+}
+
+.btn--xl {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	height: 3.5rem;
+	border-radius: 0.4375rem;
+	font-size: 1.5rem;
+}

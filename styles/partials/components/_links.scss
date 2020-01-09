@@ -1,0 +1,13 @@
+/**
+| Link Styles:
+|
+| Inherits link styles from `../_elements.scss`.
+============================================================================= */
+
+a {
+	color: inherit;
+
+	&:hover {
+		color: #000;
+	}
+}
